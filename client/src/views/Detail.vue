@@ -1,6 +1,7 @@
 <template>
   <div class="px-5 my-5 container " style="width=50%">
     <div class="container-fluid">
+    <!-- youtube 링크에서 'watch?v=' 부분을 'embed/'로 바꾸면 x-frame option 없이 불러올 수 있다 -->
       <iframe id="player" type="text/html" width="800rem" height="450rem"
         :src="videoUrl"
         class=""
@@ -126,6 +127,7 @@ export default {
     },
     videoUrl: function () {
       return 'http://www.youtube.com/embed/' + this.videoKey
+      // youtube 링크에서 'watch?v=' 부분을 'embed/'로 바꾸면 x-frame option 없이 불러올 수 있다 
     }
   }
 }
